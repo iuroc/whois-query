@@ -13,3 +13,7 @@
 - 请求方式：GET/POST
 - 请求参数
   - domain：需要查询的域名，如 `baidu.com`
+
+## 公益接口
+
+- http://api.apee.top/other/whois-query/Aliyun_whois.php?domain=google.com
