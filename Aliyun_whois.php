@@ -51,7 +51,10 @@ class Whois
     }
 }
 $domain = $_GET['domain'] ?? $_POST['domain'] ?? '';
-$domain = $domain ? $domain : 'apee.top';
+if (!$domain) {
+    echo '请输入 domain 参数';
+    die();
+}
 $whois = new Whois($domain);
 $data = $whois->get_whois();
 header('Content-Type: application/json');
