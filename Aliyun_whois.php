@@ -50,7 +50,7 @@ class Whois
         return $result;
     }
 }
-$domain = $_GET['domain'] ?? $_POST['domain'] ?? 'apee.top';
+$domain = $_GET['domain'] ?? $_POST['domain'] ?? '';
 $domain = $domain ? $domain : 'apee.top';
 $whois = new Whois($domain);
 $data = $whois->get_whois();
